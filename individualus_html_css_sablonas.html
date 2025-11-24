@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mano Personalizuotas Šablonas</title>
+
+    <style>
+        /* -------------------- BENDRI STILIAI -------------------- */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: #f7f7f7;
+            color: #333;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* -------------------- ANTRAŠTĖ -------------------- */
+        header {
+            background: #222;
+            color: #fff;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo {
+            font-size: 26px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        nav a {
+            margin-left: 25px;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffb100;
+        }
+
+        /* -------------------- HERO SEKCIJA -------------------- */
+        .hero {
+            height: 70vh;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+                url('https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1600&q=80') center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            max-width: 700px;
+        }
+
+        .hero .btn {
+            margin-top: 25px;
+            padding: 12px 28px;
+            background: #ffb100;
+            color: #000;
+            font-size: 18px;
+            border-radius: 6px;
+            transition: 0.3s;
+        }
+
+        .hero .btn:hover {
+            background: #ffc849;
+        }
+
+        /* -------------------- SEKCIJA: APIE -------------------- */
+        .apie {
+            padding: 60px 40px;
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .apie img {
+            width: 45%;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .apie-text {
+            width: 55%;
+        }
+
+        .apie-text h2 {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .apie-text p {
+            line-height: 1.6;
+        }
+
+        /* -------------------- PORA TVARKINGŲ KORTELIŲ -------------------- */
+        .services {
+            background: #fff;
+            padding: 60px 40px;
+        }
+
+        .services h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 30px;
+        }
+
+        .card-wrapper {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .card {
+            background: #f6f6f6;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+        }
+
+        /* -------------------- PORA -------------------- */
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #222;
+            color: #bbb;
+            margin-top: 40px;
+        }
+
+        /* -------------------- RESPONSIVE -------------------- */
+        @media (max-width: 900px) {
+            .apie {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .apie img, .apie-text {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="logo">ManoProjektas</div>
+        <nav>
+            <a href="#">Pagrindinis</a>
+            <a href="#apie">Apie</a>
+            <a href="#kontaktai">Kontaktai</a>
+        </nav>
+    </header>
+
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <h1>Sveiki atvykę į mano puslapį</h1>
+        <p>Čia galite įdėti bet kokią informaciją: asmeninį portfolio, verslo pristatymą arba paprastą pristatomąjį puslapį.</p>
+        <a href="#apie" class="btn">Sužinoti daugiau</a>
+    </section>
+
+
+    <!-- APIE SEKCIJA -->
+    <section class="apie" id="apie">
+        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1200&q=80" alt="Apie mane">
+
+        <div class="apie-text">
+            <h2>Apie projektą</h2>
+            <p>
+                Šis šablonas sukurtas taip, kad būtų lengvai redaguojamas — galite pakeisti tekstus, paveikslėlius, spalvas
+                ir struktūrą pagal savo poreikius. Puikiai tinka pristatymams, portfolio ar mažiems projektams.
+            </p>
+        </div>
+    </section>
+
+
+    <!-- PASLAUGŲ ARBA INFORMACIJOS KORTELĖS -->
+    <section class="services">
+        <h2>Privalumai</h2>
+
+        <div class="card-wrapper">
+            <div class="card">
+                <h3>Lengvai redaguojama</h3>
+                <p>Visi elementai aiškiai išdėstyti, todėl nesunku pritaikyti dizainą savo poreikiams.</p>
+            </div>
+
+            <div class="card">
+                <h3>Responsyvus dizainas</h3>
+                <p>Puslapis automatiškai prisitaiko prie telefono, planšetės ir kompiuterio.</p>
+            </div>
+
+            <div class="card">
+                <h3>Šiuolaikiška išvaizda</h3>
+                <p>Modernus, aiškus ir estetiškas dizainas — tinka įvairioms idėjoms.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer id="kontaktai">
+        © 2025 | Sukurta specialiai tau
+    </footer>
+
+</body>
+</html>
